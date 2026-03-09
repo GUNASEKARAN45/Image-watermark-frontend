@@ -15,18 +15,15 @@ export default function Navbar() {
 
   return (
     <nav style={styles.nav}>
-      {/* Left - Logo */}
       <div style={styles.left}>
         <Link to="/upload" style={styles.brand}>Switch Mobility</Link>
       </div>
 
-      {/* Center - Nav links */}
       <div style={styles.center}>
         <NavLink to="/upload" active={location.pathname === '/upload'}>Upload</NavLink>
         <NavLink to="/gallery" active={location.pathname === '/gallery'}>Gallery</NavLink>
       </div>
 
-      {/* Right - User + Logout */}
       <div style={styles.right}>
         <button
           onClick={handleLogout}

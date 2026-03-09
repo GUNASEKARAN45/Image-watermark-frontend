@@ -39,7 +39,6 @@ export default function SharedImage() {
     <div style={styles.page}>
      
 
-      {/* Full image with watermark - this is the entire page */}
       <div style={styles.imageContainer}>
         <div style={styles.imageWrapper}>
           <img
@@ -47,7 +46,6 @@ export default function SharedImage() {
             alt={image.title}
             style={styles.image}
           />
-          {/* Tiled watermark overlay */}
           <div style={styles.watermarkLayer}>
             {Array.from({ length: 40 }).map((_, i) => (
               <span key={i} style={styles.watermarkTile}>© {image.uploaderName}</span>

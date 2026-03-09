@@ -16,7 +16,6 @@ export default function Gallery() {
 
   const fetchImages = async () => {
     try {
-      // Fetch only the current user's images
       const res = await api.get('/images/my');
       setImages(res.data);
     } catch {
@@ -135,7 +134,6 @@ export default function Gallery() {
         </div>
       )}
 
-      {/* Share Modal */}
       {sharePopup && (
         <div style={styles.modalOverlay} onClick={() => setSharePopup(null)}>
           <div style={styles.modal} onClick={e => e.stopPropagation()}>

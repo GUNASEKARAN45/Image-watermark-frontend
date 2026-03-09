@@ -24,7 +24,6 @@ function AppRoutes() {
   const { user } = useAuth();
   const location = useLocation();
 
-  // Never show Navbar on share pages — they are fully standalone
   const isSharePage = location.pathname.startsWith('/share/');
 
   return (

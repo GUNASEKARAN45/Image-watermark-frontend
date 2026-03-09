@@ -55,7 +55,6 @@ export default function Upload() {
         
 
         <form onSubmit={handleSubmit} style={styles.form}>
-          {/* Drop zone */}
           <div
             style={{
               ...styles.dropzone,
@@ -71,7 +70,6 @@ export default function Upload() {
               <div style={styles.previewWrap}>
                 <img src={preview} alt="preview" style={styles.previewImg} />
                 <div style={styles.watermarkOverlay}>
-                  {/* Tiled watermark preview */}
                   {Array.from({ length: 20 }).map((_, i) => (
                     <span key={i} style={styles.watermarkTile}>© {user?.name}</span>
                   ))}
@@ -102,7 +100,6 @@ export default function Upload() {
           <input ref={fileInputRef} type="file" accept="image/*"
             onChange={e => handleFile(e.target.files[0])} style={{ display: 'none' }} />
 
-          {/* Title */}
           <div style={styles.field}>
             <label style={styles.label}>Image Title</label>
             <input
@@ -114,7 +111,6 @@ export default function Upload() {
             />
           </div>
 
-          {/* Info */}
           <div style={styles.infoBanner}>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2">
               <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
